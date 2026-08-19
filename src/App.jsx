@@ -14,7 +14,7 @@ import './index.css'
 
 function App() {
   return(
-    <BrowserRouter>
+    <BrowserRouter basename="/ToDoListv1/">
       <Routes>
           <Route path="/" element={<LogSignLayout/>}>
             <Route index element={<LoginPage/>}/>

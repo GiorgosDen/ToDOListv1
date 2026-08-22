@@ -80,28 +80,28 @@ function SignUp(){
     return(
         <>
         {/*User links to Log In page, if has a account */}
-        <div id="logInHeader" class="flex align-bottom justify-end gap-1 pt-2">
-            <label class="text-sm pt-1">Already have an account?</label>
+        <div id="logInHeader" className="flex align-bottom justify-center md:justify-end gap-1 pt-2">
+            <label className="text-sm">Already have an account?</label>
             <Link to={"/"} className="text-sm font-semibold text-blue-700"> Log in </Link>
         </div>
         {/*The welcome text upper the Sing Up form */}
         <div className="flex flex-col justify-start">
-            <label className="font-bold text-2xl">Create your Account</label>
-            <label className="text-sm">Let's get you started with ToDoList.</label>
+            <label className="font-bold text-xl md:text-2xl">Create your Account</label>
+            <label className="text-xs md:text-sm">Let's get you started with ToDoList.</label>
         </div>
         {/*Sign Up form */}
         <div id="signFormArea" className="flex flex-col justify-start gap-1">
-            <label className="text-md">Full Name <span className={`text-sm text-red-700 ${nameError}`}>* Unvalid Full Name</span></label>
+            <label className="text-sm md:text-md">Full Name <span className={`text-sm text-red-700 ${nameError}`}>* Unvalid Full Name</span></label>
             <input type="text" id="inputName" className="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-lg focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-md placeholder:text-body" 
             placeholder="Enter your full name" required value={userName} onChange={(name)=>setUserName(name.target.value)}/>
-            <label className="text-md">Email Address <span className={`text-sm text-red-700 ${emailError}`}>* Unvalid Email</span></label>
+            <label className="text-sm md:text-md">Email Address <span className={`text-sm text-red-700 ${emailError}`}>* Unvalid Email</span></label>
             <input type="text" id="inputEmail" className="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-lg focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-md placeholder:text-body" 
             placeholder="user.example@gmail.com" required value={userEmail} onChange={(em)=>setUserEmail(em.target.value)}/>
-            <label className="text-md">Password <span className={`text-sm text-red-700 ${passwordError}`}>* Unvalid Password</span></label>
+            <label className="text-sm md:text-md">Password <span className={`text-sm text-red-700 ${passwordError}`}>* Unvalid Password</span></label>
             <input type="password" id="inputPass" className="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-lg focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-md placeholder:text-body" 
             placeholder="Create your password" required value={userPassword} onChange={(pass)=>setUserPassword(pass.target.value)}/>
-            <p id="helperPassword" class="text-gray-600 text-xs">Must be at least 8 characters</p>
-            <label className="text-md">Confirm Password <span className={`text-sm text-red-700 ${verPasswordError}`}>* The password must be the same</span></label>
+            <p id="helperPassword" className="text-gray-600 text-xs">Must be at least 8 characters</p>
+            <label className="text-sm md:text-md">Confirm Password <span className={`text-sm text-red-700 ${verPasswordError}`}>* The password must be the same</span></label>
             <input type="password" id="verifyPass" className="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-lg focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-md placeholder:text-body" 
             placeholder="Confirm your password" required value={userVerPassword} onChange={(verPass)=>setUserVerPassword(verPass.target.value)}/>
             {/*Agree Terms & Policy checkbox  */}

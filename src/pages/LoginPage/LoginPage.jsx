@@ -1,6 +1,6 @@
 {/*Contains the Login page's split-screen form */}
 
-import { use, useState } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 function LoginPage(){
@@ -70,7 +70,7 @@ function LoginPage(){
             <label className="text-sm">Login to your ToDoList account</label>
         </div>
         {/*The Log In form */}
-        <div id="logFormArea" class="flex flex-col justify-start gap-2">
+        <div id="logFormArea" className="flex flex-col justify-start gap-2">
             <label className="text-md">Email Address <span className={`text-sm text-red-700 ${emailError}`}>*Unvalid email</span></label>
             <input type="text" id="first_name" className="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-lg focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-md placeholder:text-body" 
             placeholder="user.example@gmail.com" required value={userEmail} onChange={(em)=>setUserEmail(em.target.value)}/>

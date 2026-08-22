@@ -1,18 +1,15 @@
 import { useState, useEffect } from 'react';
 //Import Page Components
-import reactLogo from '../../assets/react.svg'
-import viteLogo from '../../assets/vite.svg'
-import heroImg from '../../assets/hero.png'
-import CheckTask from './components/CheckTask'
-import MainHeader from './components/MainHeader'
-import AddTaskMenu from './components/AddTaskMenu'
-import CompletedTaskMenu from './components/CompletedTaskMenu'
+import CheckTask from './components/CheckTask';
+import MainHeader from './components/MainHeader';
+import AddTaskMenu from './components/AddTaskMenu';
+import CompletedTaskMenu from './components/CompletedTaskMenu';
 //Import css files
 import '../../App.css'
 import '../../index.css'
 import { useLocation } from 'react-router-dom';
 
-function MainPage(){
+function MainPage({changeNavVisibility}){
 
   //Get the username
   const location = useLocation();

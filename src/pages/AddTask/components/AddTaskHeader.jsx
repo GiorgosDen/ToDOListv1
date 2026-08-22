@@ -6,8 +6,8 @@ function AddTaskHeader(){
         <Link to={"/home"} className="text-sm pr-2 font-semibold text-blue-800 hover:text-blue-950 hover:border-b">
              Back
         </Link>
-        <p className="text-2xl font-bold">Add New Task</p>
-        <p className="text-xs text-gray-300">Create a new task and organize your schedule.</p>
+        <p className="text-xl md:text-2xl font-bold">Add New Task</p>
+        <p className="text-xs md:text-sm text-gray-300">Create a new task and organize your schedule.</p>
     </div>
     );
 }

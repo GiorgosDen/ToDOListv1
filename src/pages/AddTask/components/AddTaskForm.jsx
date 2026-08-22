@@ -96,31 +96,31 @@ function AddTaskForm(){
     }
 
     return(
-        <div className="h-96 overflow-y-auto flex flex-col px-5">
+        <div className="h-[80vh] md:h-96 overflow-y-auto flex flex-col px-5">
         <hr/>
         {/*Task Information (Name* & Description) Area*/}
         <div className="flex flex-col py-2">
-            <label className="text-xl font-semibold">Task Information</label>
-            <label className="text-lg">Task Name <span className="text-red-700 text-sm font-bold">* <span className={taskNameError}>Add a Task Name</span></span></label>
+            <label className="text-lg md:text-xl font-semibold">Task Information</label>
+            <label className="text-base md:text-lg">Task Name <span className="text-red-700 text-xs md:text-sm font-bold">* <span className={taskNameError}>Add a Task Name</span></span></label>
             <input type="text" className="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-[1.5%] py-[1.7%] shadow-xs placeholder:text-body" 
             placeholder="Enter task name..." required value={taskName} onChange={(name)=>setTaskName(name.target.value)}/>
-            <label className="text-lg">Description</label>
+            <label className="text-base md:text-lg">Description</label>
             <textarea rows="4" className="min-h-24 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full p-3.5 shadow-xs placeholder:text-body" placeholder="Write additional details..."></textarea>
         </div>
         <hr/>
         {/*Task Schedule (Date, Time, Reminder) Area*/}
-        <label className="text-xl font-semibold">Schedule</label>
+        <label className="text-lg md:text-xl font-semibold">Schedule</label>
         <div id="scheduleForm" className="flex flex-row flex-wrap gap-4 py-2">
             <div id="dateArea" className="w-1/3 flex flex-col">
-                <label className="text-lg ">Due Date</label>
+                <label className="text-base md:text-lg ">Due Date</label>
                 <input type="date"/>
             </div>
             <div id="timeArea" className="w-1/3 flex flex-col">
-                <label className="text-lg ">Time <span className="text-red-700 text-sm font-bold">* <span className={taskTimeError}>Add a Task Time</span></span></label>
+                <label className="text-base md:text-lg ">Time <span className="text-red-700 text-xs md:text-sm font-bold">* <span className={taskTimeError}>Add a Task Time</span></span></label>
                 <input type="time" value={taskTime} onChange={(time)=> setTaskTime(time.target.value)}/>
             </div>
             <div id="reminderArea" className="w-1/3 flex flex-col">
-                <label className="text-lg ">Reminder</label>
+                <label className="text-base md:text-lg ">Reminder</label>
                 <div>
                     <select value={taskReminder} onChange={(rem)=>setTaskReminder(rem.target.value)}>
                         <option value={0} disabled>Reminder</option>
@@ -133,10 +133,10 @@ function AddTaskForm(){
         </div>
         <hr/>
         {/*Category Area*/}
-            <label className="text-xl font-semibold">Organization</label>
-            <label className="text-lg">Category<span className="font-bold text-sm text-red-700"> *<span className={`${taskCategoryError}`}>Select a Task Category</span></span></label>
+            <label className="text-lg md:text-xl font-semibold">Organization</label>
+            <label className="text-base md:text-lg">Category<span className="font-bold text-xs md:text-sm text-red-700"> *<span className={`${taskCategoryError}`}>Select a Task Category</span></span></label>
             {/*Work Category Button */}
-            <div className="flex flex-row justify-between py-2">
+            <div className="flex flex-row flex-wrap justify-between py-2 gap-1">
                 <button type="button" id={0} className={`flex ${activeButtonId===0? 'bg-blue-400':'bg-transparent'} hover:bg-blue-400 hover:bg-opacity-30 text-blue-700 py-1 px-2 border border-blue-500 hover:border-blue-700 rounded-2xl`}
                  onClick={(e)=>{setActiveButtonId(0); setTaskCategory("Work");}}>
                     <svg className="w-4 h-6 mr-1 shrink-0 fill-current stroke-current" 

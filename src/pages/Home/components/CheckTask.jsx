@@ -39,10 +39,10 @@ function CheckTask({userTask, onCheckTaskChange}){
         </div>
       </div>
       <div className='flex justify-between gap-2'>
-        <span className="text-md text-gray-400 whitespace-nowrap">
+        <span className="text-xs md:text-md text-gray-400 whitespace-nowrap">
           {userTask.time}
         </span>
-        <Link to={`taskPage/${userTask.id}`} className="text-sm py-1 px-2 text-white bg-blue-400 hover:bg-blue-700 rounded-2xl">
+        <Link to={`taskPage/${userTask.id}`} className="text-xs md:text-sm py-1 px-2 text-white bg-blue-400 hover:bg-blue-700 rounded-2xl">
           !
         </Link>
       </div>

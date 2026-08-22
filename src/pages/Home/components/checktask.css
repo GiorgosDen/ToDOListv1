@@ -13,7 +13,7 @@
   }
 
   .task-title {
-    @apply text-base font-medium text-gray-800 select-none;
+    @apply text-sm md:text-base font-medium text-gray-800 select-none;
   }
 
   /*If task expired or completed*/
